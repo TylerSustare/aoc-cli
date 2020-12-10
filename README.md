@@ -88,4 +88,3 @@ AOC_INPUT_DIRECTORY="input"
 ```
 
 You are done ! You should now be able to download the input file by running the `aoc` command.
-
