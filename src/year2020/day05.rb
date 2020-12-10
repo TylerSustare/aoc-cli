@@ -8,12 +8,12 @@ module Year2020
     end
 
     def part1(input)
-      input.each { |e| seat_coordinates(e.split('')) }
+      input.each { |e| add_seat_id(e.split('')) }
       @seat_ids.max
     end
 
     def part2(input)
-      input.each { |e| seat_coordinates(e.split('')) }
+      input.each { |e| add_seat_id(e.split('')) }
       @seat_ids.sort!
       @seat_ids.each_with_index do |val, idx|
         return val + 1 if val + 1 != @seat_ids[idx + 1] && !@seat_ids[idx + 1].nil?
@@ -22,7 +22,7 @@ module Year2020
 
     private
 
-    def seat_coordinates(instructions)
+    def add_seat_id(instructions)
       set_min_max(min: 0, max: 127)
       instructions[0..6].each { |char| find_seat(char) }
       set_min_max(min: 0, max: 7)
