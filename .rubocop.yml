@@ -2,3 +2,5 @@ Style/NegatedIf:
   Enabled: false
 Style/FrozenStringLiteralComment:
   Enabled: false
+AllCops:
+  SuggestExtensions: false
