@@ -3,11 +3,11 @@ module Year2020
     def part1(input)
       result = 0
       input.each do |answers|
-        merged_answers = Set[]
+        group_answers = Set[]
         answers.each do |answer|
-          merged_answers.merge(answer)
+          group_answers.merge(answer)
         end
-        result += merged_answers.count
+        result += group_answers.count
       end
       result
     end
@@ -15,12 +15,12 @@ module Year2020
     def part2(input)
       result = 0
       input.each do |answers|
-        intersection_answers = nil
+        group_answers = nil
         answers.each do |answer|
-          intersection_answers ||= answer
-          intersection_answers = intersection_answers.intersection(answer)
+          group_answers ||= answer
+          group_answers = group_answers.intersection(answer)
         end
-        result += intersection_answers.count
+        result += group_answers.count
       end
       result
     end
